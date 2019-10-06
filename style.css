@@ -1,0 +1,33 @@
+.wrapper{
+    height:100vh;
+    width: 93.75%;
+    background:
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 22px;
+    line-height: 30px;
+}
+.navbar{
+
+}
+.navbar ul{
+    display:flex;
+    justify-content: space-around;
+}
+.navbar ul li a{
+    display:block;
+    width:100px;
+    line-height:41px;
+    border-radius:20px;
+    color:#000;
+    text-decoration:none;
+    text-align: center;
+}
+.navbar ul li a:hover{
+    background-color: #000;
+    color:#fff;
+}
