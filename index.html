@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Repair Design Project</title>
     <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header>
+            <h1>Repair Design Project</h1>
             <div class="logo">IC "Repair Design Project"</div>
             <nav class="navbar">
                 <ul>
@@ -20,54 +21,126 @@
                     <li><a href="#">TEAM</a></li>
                     <li><a href="#">REVIEWS</a></li>
                     <li><a href="#">CONTACTS</a></li>
-                    <li><a href="#">+7 (928) 768-32-39</a></li>
-                    <li><button>Request a call</button></li>
                 </ul>
             </nav>
+            <div class="callback">
+                <a href="tel:5551234567" class="callback__link">+7 (928) 768-32-39</a>
+                <button class="callback__btn">Request a call</button></li>
+            </div>
         </header> 
-    </div>
-    <main>
-        <section class="calculate-section">
-            <h2>Turnkey Repair in the city of Rostov-on-Don</h2>
-        </section>
-        <section class="completed-projects-section">
-            <h3>Completed projects</h3>
-        </section>
-        <section class="types-of-repair-section">
-                <h3>Types of repair</h3>
-        </section>
-        <section class="your-fantasies-section">
-                <h3>We realize your wildest fantasies</h3>
-        </section>
-        <section class="design-project-section">
-                <h3>Design project</h3>
-        </section>
-        <section class="goal-section">
-                <h3>6 steps to the goal</h3>
-        </section>
-        <section class="team-section">
-                <h3>Our team</h3>
-        </section>
-        <section class="client-section">
-                <h3>Our clients</h3>
-        </section>
-        <section class="map-section">
-        </section>
-    </main>
-    <footer class="header">
-            <div class="logo">IC "Repair Design Project"</div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">MEASUREMENT</a></li>
-                    <li><a href="#">TEAM</a></li>
-                    <li><a href="#">REVIEWS</a></li>
-                    <li><a href="#">CONTACTS</a></li>
-                    <li><a href="#">+7 (928) 768-32-39</a></li>
-                    <li><button>Request a call</button></li>
-                </ul>
-            </nav>
+        <main>
+            <section class="calculate-section">
+                <div class="project-slide">
+                    <div class="calculate-block">
+                        <h2 class="calculate-block__hdr">Turnkey Repair in the city of <span>Rostov-on-Don</span></h2>
+                        <p class="calculate-block__text">Get ready-made turnkey repairs on time<br>
+                                with work time saving up to 45 days and 20% from<br>
+                                cost of materials due to the organization of work</p>
+                        <form class="calculate-block__form" name="calculate" method="GET" action="#">
+                            <button class="calculate-block__form_cost">CALCULATE THE COST</button>
+                            <button class="calculate-block__form_submit" type="submit">SUBMIT YOUR APPLICATION</button>
+                        </form>
+                    </div>
+                </div>  
+                <div class="soc-panel">
+                    <div class="soc-panel__network">INSTAGRAM</div>
+                </div> 
+                <div class="scroll-panel">
+                        <div class="scroll-panel__btn">Scroll down</div>
+                        <svg class="scroll-panel__svg" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="14.4999" cy="14.5" r="13.75" stroke="#E3B873" stroke-width="1.5"/>
+                            <path d="M18.7213 13.1271L14.4081 17.4092L10.0949 13.1271" stroke="#E3B873" stroke-width="1.5"/>
+                        </svg>
+                </div> 
+            </section>
+            <section class="completed-projects-section">
+                <div class="projects-slides">
+                    <div class="projects-slides__info">
+                        <h3>Completed projects</h3>
+                        <p>Only a small part of the work performed by our company is presented on the site. 
+                            For 14 years on in the construction market we have made happy more than 1000 families</p>
+                        <div class="information">
+                            <div class="information__item">
+                                <div class="hdr">City:</div>
+                                Rostov-on-Don<br>
+                                LCD admiral
+                            </div>
+                            <div class="information__item">
+                                <div class="hdr">Apartment area:</div>
+                                81 m2
+                            </div>
+                            <div class="information__item">
+                                <div class="hdr">Repair time:</div>
+                                3.5 months
+                            </div>
+                            <div class="information__item">
+                                <div class="hdr">Repair Cost:</div>
+                                Upon request
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="projects-slides__visual">
+                       <div class="projects-menu">
+                            <ul class="project-nav">
+                                <li class="project-nav__item_active">Rostov-on-Don, Admiral</li>
+                                <li class="project-nav__item">Sochi Thieves</li>
+                                <li class="project-nav__item">Rostov-on-Don Patriotic</li>
+                            </ul>
+                       </div> 
+                       <div class="projects-slides">
+                            <div class="projects-slides__item1">
+                                <img src="./assests/images/slide1.jpg" alt="Rostov-on-Don, Admiral">
+                            </div>
+                            <div class="projects-slides__item1">
+                                <img src="./assests/images/slide2.jpg" alt="Sochi Thieves">
+                            </div>
+                            <div class="projects-slides__item1">
+                                <img src="./assests/images/slide1.jpg" alt="Rostov-on-Don Patriotic">
+                            </div>
+                       </div>
+                       <div class="projects-navigation">
+                            <span class="projects-navigation__prev">Prev</span>
+                            <span class="projects-navigation__next">Next</span>
+                        </div>
+                    </div>   
+                </div>
+            </section>
+            <section class="types-of-repair-section">
+                    <h3>Types of repair</h3>
+            </section>
+            <section class="your-fantasies-section">
+                    <h3>We realize your wildest fantasies</h3>
+            </section>
+            <section class="design-project-section">
+                    <h3>Design project</h3>
+            </section>
+            <section class="goal-section">
+                    <h3>6 steps to the goal</h3>
+            </section>
+            <section class="team-section">
+                    <h3>Our team</h3>
+            </section>
+            <section class="client-section">
+                    <h3>Our clients</h3>
+            </section>
+            <section class="map-section">
+            </section>
+        </main>
+        <footer>
+                <div class="logo">IC "Repair Design Project"</div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">PROJECTS</a></li>
+                        <li><a href="#">MEASUREMENT</a></li>
+                        <li><a href="#">TEAM</a></li>
+                        <li><a href="#">REVIEWS</a></li>
+                        <li><a href="#">CONTACTS</a></li>
+                        <li><a href="#">+7 (928) 768-32-39</a></li>
+                        <li><button>Request a call</button></li>
+                    </ul>
+                </nav>
         </footer> 
+    </div>
 </body>
 </html>

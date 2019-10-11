@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
+@font-face {
+    font-family: "FuturaBookC";
+    src: url("./assests/font/Futurabookc.otf") format("opentype");
+}
+@font-face {
+    font-family: "Futurademic";
+    src: url("./assests/font/FuturaDemic.otf") format("opentype");
+}
+
+$bgcolor: #131313;
+$color: #FFFFFF;
+$actcolor:#E3B873;
+$navsize: 14px;
+$hfont:'Yeseva One', cursive;
+$mainfont:'FuturaBookC';
+$logofont:'Futurademic';
+
+@mixin flex() {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin btn() {
+    text-transform: uppercase;
+    color: $color;
+    background:$actcolor;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover{
+        box-shadow: inset 0 0 14px #FFFFFF;
+    }
+}
+@mixin headers {
+    text-transform: uppercase;
+    font-family: $hfont;   
+}
+@mixin after() {
+    content: "";
+    height:1px;
+    background:$actcolor;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body{
+    background: $bgcolor;
+    color: $color; 
+    font-family: $mainfont;
+    height: 100vh;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin:0;
+    line-height: 1.35;
+}
+.wrapper{
+    margin:0 auto;
+    max-width: 1440px;
+    border: 1px solid #FFFFFF;
+}
+h2{
+    @include headers();
+    margin:0 0 20px;
+    font-size: 40px;
+    line-height: 132.8%;
+    span{
+        color:$actcolor;
+    }
+}
+h3{
+    @include headers();
+    color: $actcolor;
+    margin:0 0 30px;
+    font-size: 27px;
+    line-height: 138.6%;
+}
+button{
+    @include btn();
+}
+header{
+    height:83px;
+    font-size: $navsize;
+    @include flex();
+    padding-left: 82px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    h1{
+        font-size:1px;
+        line-height: 1;
+        color: $bgcolor;
+        text-indent: -999px;
+    }
+    .logo{
+        color:$actcolor;
+        font-family: $logofont;
+        white-space: nowrap;
+    }
+    .navbar{
+        width: 100%;
+        max-width:580px;
+        min-width: 400px;
+        margin: 0 6.3%;
+
+        ul{
+            @include flex();            
+            li a{
+                display:block;
+                line-height:1;
+                text-align: center;
+                position: relative;
+                &:hover{
+                color: $actcolor;
+                text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.callback{
+    font-family: $logofont;
+    @include flex();
+    width: 325px;
+    margin-right: 7.52%;
+    .callback__link{
+        color: $actcolor;
+        text-decoration:underline; 
+    }
+    .callback__btn{
+        width:161px;
+        height:37px;
+        &:hover{
+            box-shadow: inset 0 0 14px #FFFFFF;
+        }
+    }
+}
+.calculate-section{
+    padding-left: 82px; 
+    padding-bottom: 48px;   
+    position: relative;
+    .project-slide{
+        background:url(./assests/images/section1_bg.jpg) no-repeat 0 0 ;
+        height: 707px;
+        @include flex();
+        .calculate-block{
+            width:530px;
+            margin-left: 60px;
+            position: relative;
+            top: -7px;
+            .calculate-block__text{
+                font-size:22px;
+                margin-bottom:45px;
+            }
+            .calculate-block__form button{
+                height: 51px;
+                width: 207px;
+                margin-right: 20px;
+                font-size: 13px;
+                &.calculate-block__form_submit{
+                    background: none;
+                    border: 1px solid $color;
+                }
+            }
+        }
+    }
+    .soc-panel{
+        height: 82px;
+        width: 707px;
+        position: absolute;
+        top: 312px;
+        left: -312px;
+        transform: rotate(90deg);
+        text-align: center;
+    }
+    .soc-panel__network{
+        display:inline-block;
+        margin-top: 30px;
+        margin-right: 110px;
+        text-transform: uppercase;
+        font-size: $navsize;
+        color:$actcolor;
+        &::after{
+            @include after();
+            width: 51px;
+            margin-left: 8px;
+        }
+    }
+    .scroll-panel{
+        @include headers();
+        background: $bgcolor;
+        cursor: pointer;
+        height: 97px;
+        width: 247px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        z-index: 2;
+        .scroll-panel__btn{
+            display:inline-block;
+            margin-top: 34px;
+            font-size: $navsize;
+        }
+        .scroll-panel__svg{
+            margin-left: 20px;
+            vertical-align: middle;
+            margin-bottom: 3px;
+            }
+        &:hover .scroll-panel__svg {
+            fill:$color;
+        } 
+    }
+}
+.completed-projects-section{
+    .projects-slides{
+        @include flex();
+        align-items: normal;
+        .projects-slides__info{
+            width:440px;
+            margin-left:7%;
+            padding-top:128px;
+            h3{
+                width: 253px;
+                position: relative;
+                &::after{
+                    @include after();
+                    width:92px;
+                    position: absolute;
+                    right: 0px;
+                    bottom: 18px;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 1.52;
+                margin-bottom: 40px;
+            }
+            .information{
+                @include flex();
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .information__item{
+                    width:42%;
+                    margin-bottom: 35px;
+                    font-size: 15px;
+                    padding-right: 2%;
+                    box-sizing: border-box;
+                    .hdr{
+                        color:$actcolor;
+                        @include headers();
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .projects-slides__visual{
+            padding-top:59px;
+            width: 845px;
+            flex: 0 0 845px;
+            overflow: hidden;
+            .project-nav{
+                @include flex();
+                justify-content: flex-start;
+                margin-bottom: 45px;
+                li{
+                    @include headers();
+                    opacity: 0.3;
+                    margin-right: 60px;
+                    cursor: pointer;
+                    padding-bottom: 7px;
+                    &:hover{
+                        opacity: 1;
+                    }
+                    &.project-nav__item_active{
+                        opacity: 1;
+                        color: $actcolor;
+                        border-bottom: 1px solid $actcolor;
+                    }
+                }
+            }
+            .projects-slides{
+                @include flex();
+                position: relative;
+                .projects-slides__item1{
+                    width:679px;
+                    margin-right: 20px;
+                }
+            }
+            .projects-navigation{
+                width: 100%;
+                height: 55px;
+                position: relative;
+                top: -50%;
+                span{
+                    background: url(./assests/images/nav_btn.png) no-repeat center center;
+                    display: block;
+                    position: absolute;
+                    width: 55px;
+                    height: 55px;
+                    cursor: pointer;
+                    margin-top:27px;
+                    text-indent: -9999px;
+                    &.projects-navigation__prev{
+                        display: none;
+                    }
+                    &.projects-navigation__next{
+                        right:45px;
+                    }
+                } 
+            }  
+        }       
+    }
+}

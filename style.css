@@ -1,33 +1,288 @@
-.wrapper{
-    height:100vh;
-    width: 93.75%;
-    background:
-}
-.header{
+@import url("https://fonts.googleapis.com/css?family=Yeseva+One&display=swap");
+@font-face {
+  font-family: "FuturaBookC";
+  src: url("./assests/font/Futurabookc.otf") format("opentype"); }
+@font-face {
+  font-family: "Futurademic";
+  src: url("./assests/font/FuturaDemic.otf") format("opentype"); }
+body {
+  background: #131313;
+  color: #FFFFFF;
+  font-family: "FuturaBookC";
+  height: 100vh; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+p {
+  margin: 0;
+  line-height: 1.35; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  border: 1px solid #FFFFFF; }
+
+h2 {
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+  margin: 0 0 20px;
+  font-size: 40px;
+  line-height: 132.8%; }
+  h2 span {
+    color: #E3B873; }
+
+h3 {
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+  color: #E3B873;
+  margin: 0 0 30px;
+  font-size: 27px;
+  line-height: 138.6%; }
+
+button {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #E3B873;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px; }
+  button:hover {
+    box-shadow: inset 0 0 14px #FFFFFF; }
+
+header {
+  height: 83px;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 82px;
+  text-transform: uppercase;
+  box-sizing: border-box; }
+  header h1 {
+    font-size: 1px;
+    line-height: 1;
+    color: #131313;
+    text-indent: -999px; }
+  header .logo {
+    color: #E3B873;
+    font-family: "Futurademic";
+    white-space: nowrap; }
+  header .navbar {
+    width: 100%;
+    max-width: 580px;
+    min-width: 400px;
+    margin: 0 6.3%; }
+    header .navbar ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      header .navbar ul li a {
+        display: block;
+        line-height: 1;
+        text-align: center;
+        position: relative; }
+        header .navbar ul li a:hover {
+          color: #E3B873;
+          text-decoration: none; }
+
+.callback {
+  font-family: "Futurademic";
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 325px;
+  margin-right: 7.52%; }
+  .callback .callback__link {
+    color: #E3B873;
+    text-decoration: underline; }
+  .callback .callback__btn {
+    width: 161px;
+    height: 37px; }
+    .callback .callback__btn:hover {
+      box-shadow: inset 0 0 14px #FFFFFF; }
+
+.calculate-section {
+  padding-left: 82px;
+  padding-bottom: 48px;
+  position: relative; }
+  .calculate-section .project-slide {
+    background: url(./assests/images/section1_bg.jpg) no-repeat 0 0;
+    height: 707px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-}
-.logo{
-    font-size: 22px;
-    line-height: 30px;
-}
-.navbar{
-
-}
-.navbar ul{
-    display:flex;
-    justify-content: space-around;
-}
-.navbar ul li a{
-    display:block;
-    width:100px;
-    line-height:41px;
-    border-radius:20px;
-    color:#000;
-    text-decoration:none;
+    align-items: center; }
+    .calculate-section .project-slide .calculate-block {
+      width: 530px;
+      margin-left: 60px;
+      position: relative;
+      top: -7px; }
+      .calculate-section .project-slide .calculate-block .calculate-block__text {
+        font-size: 22px;
+        margin-bottom: 45px; }
+      .calculate-section .project-slide .calculate-block .calculate-block__form button {
+        height: 51px;
+        width: 207px;
+        margin-right: 20px;
+        font-size: 13px; }
+        .calculate-section .project-slide .calculate-block .calculate-block__form button.calculate-block__form_submit {
+          background: none;
+          border: 1px solid #FFFFFF; }
+  .calculate-section .soc-panel {
+    height: 82px;
+    width: 707px;
+    position: absolute;
+    top: 312px;
+    left: -312px;
+    transform: rotate(90deg);
+    text-align: center; }
+  .calculate-section .soc-panel__network {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 110px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #E3B873; }
+    .calculate-section .soc-panel__network::after {
+      content: "";
+      height: 1px;
+      background: #E3B873;
+      display: inline-block;
+      vertical-align: middle;
+      width: 51px;
+      margin-left: 8px; }
+  .calculate-section .scroll-panel {
+    text-transform: uppercase;
+    font-family: "Yeseva One", cursive;
+    background: #131313;
+    cursor: pointer;
+    height: 97px;
+    width: 247px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     text-align: center;
-}
-.navbar ul li a:hover{
-    background-color: #000;
-    color:#fff;
-}
+    z-index: 2; }
+    .calculate-section .scroll-panel .scroll-panel__btn {
+      display: inline-block;
+      margin-top: 34px;
+      font-size: 14px; }
+    .calculate-section .scroll-panel .scroll-panel__svg {
+      margin-left: 20px;
+      vertical-align: middle;
+      margin-bottom: 3px; }
+    .calculate-section .scroll-panel:hover .scroll-panel__svg {
+      fill: #FFFFFF; }
+
+.completed-projects-section .projects-slides {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: normal; }
+  .completed-projects-section .projects-slides .projects-slides__info {
+    width: 440px;
+    margin-left: 7%;
+    padding-top: 128px; }
+    .completed-projects-section .projects-slides .projects-slides__info h3 {
+      width: 253px;
+      position: relative; }
+      .completed-projects-section .projects-slides .projects-slides__info h3::after {
+        content: "";
+        height: 1px;
+        background: #E3B873;
+        display: inline-block;
+        vertical-align: middle;
+        width: 92px;
+        position: absolute;
+        right: 0px;
+        bottom: 18px; }
+    .completed-projects-section .projects-slides .projects-slides__info p {
+      font-size: 18px;
+      line-height: 1.52;
+      margin-bottom: 40px; }
+    .completed-projects-section .projects-slides .projects-slides__info .information {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap; }
+      .completed-projects-section .projects-slides .projects-slides__info .information .information__item {
+        width: 42%;
+        margin-bottom: 35px;
+        font-size: 15px;
+        padding-right: 2%;
+        box-sizing: border-box; }
+        .completed-projects-section .projects-slides .projects-slides__info .information .information__item .hdr {
+          color: #E3B873;
+          text-transform: uppercase;
+          font-family: "Yeseva One", cursive;
+          font-size: 18px;
+          margin-bottom: 5px; }
+  .completed-projects-section .projects-slides .projects-slides__visual {
+    padding-top: 59px;
+    width: 845px;
+    flex: 0 0 845px;
+    overflow: hidden; }
+    .completed-projects-section .projects-slides .projects-slides__visual .project-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 45px; }
+      .completed-projects-section .projects-slides .projects-slides__visual .project-nav li {
+        text-transform: uppercase;
+        font-family: "Yeseva One", cursive;
+        opacity: 0.3;
+        margin-right: 60px;
+        cursor: pointer;
+        padding-bottom: 7px; }
+        .completed-projects-section .projects-slides .projects-slides__visual .project-nav li:hover {
+          opacity: 1; }
+        .completed-projects-section .projects-slides .projects-slides__visual .project-nav li.project-nav__item_active {
+          opacity: 1;
+          color: #E3B873;
+          border-bottom: 1px solid #E3B873; }
+    .completed-projects-section .projects-slides .projects-slides__visual .projects-slides {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative; }
+      .completed-projects-section .projects-slides .projects-slides__visual .projects-slides .projects-slides__item1 {
+        width: 679px;
+        margin-right: 20px; }
+    .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation {
+      width: 100%;
+      height: 55px;
+      position: relative;
+      top: -50%; }
+      .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span {
+        background: url(./assests/images/nav_btn.png) no-repeat center center;
+        display: block;
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        margin-top: 27px;
+        text-indent: -9999px; }
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__prev {
+          display: none; }
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__next {
+          right: 45px; }
+
+/*# sourceMappingURL=style.css.map */
