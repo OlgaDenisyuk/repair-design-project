@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
 @font-face {
     font-family: "FuturaBookC";
-    src: url("./assests/font/Futurabookc.otf") format("opentype");
+    src: url("../assests/font/Futurabookc.otf") format("opentype");
 }
 @font-face {
     font-family: "Futurademic";
-    src: url("./assests/font/FuturaDemic.otf") format("opentype");
+    src: url("../assests/font/FuturaDemic.otf") format("opentype");
 }
 
 $bgcolor: #131313;
@@ -36,6 +36,13 @@ $logofont:'Futurademic';
 @mixin headers {
     text-transform: uppercase;
     font-family: $hfont;   
+}
+@mixin section-headers{
+    max-width: 200px;
+     text-align: center;
+    padding-bottom: 40px;  
+    font-size: 20px;
+    line-height: 1.3;
 }
 @mixin after() {
     content: "";
@@ -152,7 +159,7 @@ header{
     padding-bottom: 48px;   
     position: relative;
     .project-slide{
-        background:url(./assests/images/section1_bg.jpg) no-repeat 0 0 ;
+        background:url(../assests/images/section1_bg.jpg) no-repeat 0 0 ;
         height: 707px;
         @include flex();
         .calculate-block{
@@ -274,7 +281,7 @@ header{
                     margin-right: 15px;
                     cursor: pointer;
                     &.pagination__left, &.pagination__right{
-                        background: url(./assests/images/vector.png) no-repeat 0 0;
+                        background: url(../assests/images/vector.png) no-repeat 0 0;
                         width:42px;
                         height: 14px;
                         margin-right: 25px;
@@ -321,11 +328,11 @@ header{
                     }
                 }
             }
-            .projects-slides{
+            .projects-slides-container{
                 @include flex();
                 position: relative;
                 margin-bottom: 35px;
-                .projects-slides__item1{
+                .projects-slides-container__item1{
                     width:679px;
                     margin-right: 20px;
                 }
@@ -336,7 +343,7 @@ header{
                 position: relative;
                 top: -50%;
                 span{
-                    background:$actcolor url(./assests/images/nav.png) no-repeat center center;
+                    background:$actcolor url(../assests/images/nav.png) no-repeat center center;
                     display: block;
                     position: absolute;
                     width: 55px;
@@ -360,13 +367,117 @@ header{
         }       
     }
     .online-control{
-        background: url(./assests/images/online.png) no-repeat center bottom;
+        background: url(../assests/images/online.png) no-repeat center bottom;
         @include headers();
-        max-width: 200px;
+        @include section-headers();
+        margin: 0 auto 30px;
+    }
+    .video-container{
         text-align: center;
-        margin: 0 auto; 
-        padding-bottom: 415px;  
+        z-index: 2;
+        position: relative;
+    }
+}
+.types-of-repair-section{
+    background: $color url(../assests/images/BACKGROUND_LINE.jpg) no-repeat center 0;
+    color:#363636;
+    position: relative;
+    top: -219px;
+    padding-top: 98px+219px;
+    .types-of-repair-section__descr{
         font-size: 20px;
-        line-height: 1.3;
+        line-height: 1.6;
+        max-width: 680px;
+        margin:0 auto 90px;
+        text-align:center;
+        position: relative;
+        &::before{
+            @include after();
+            width:55px;
+            position: absolute;
+            left: 50%;
+            margin-left: -28px;
+            top: -35px;
+        }
+    }
+    .types-of-repair__form{
+        margin: 0 auto 140px;
+        max-width: 770px;
+    }
+    .types-of-repair__wrap{
+        @include flex();
+        label{
+            opacity: 0.5;
+            font-size: 15px;
+        }
+        input{
+            max-width:231px;
+            font-size: 20px;
+            border:none;
+            border-bottom:1px solid rgba(0, 0, 0, .3);
+            &::placeholder {  opacity:1}             
+        }
+        button{
+            @include btn();
+            width:200px;
+            height:51px;
+            font-size: 15px;
+        }
+    }
+    .types-of-repair__agreement{
+        padding-top:33px;
+        text-align:center;
+        font-size:16px;
+        input {
+            display: none;
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            }
+        span{
+            position: relative;
+            padding-left:25px;
+            display:inline-block;
+            &::before{
+                @include after();
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top:0;
+                left:0;
+                cursor: pointer;
+            }            
+        }
+        input:checked + span::before{
+             background: $actcolor url(../assests/images/ico1.png) no-repeat 0 center;
+        }   
+            
+    }
+    .types-of-repair__hdr{
+        background: url(../assests/images/types.png) no-repeat center bottom;
+        @include headers();
+        @include section-headers();
+        margin: 0 auto 30px;
+    }
+    .types-of-repair__content{
+        @include flex();
+        max-width: 1236px;
+        margin:0 auto 125px;
+        & > div{
+            width: 31.7%;
+        }
+        .types-of-repair__item1{
+            background:url(../assests/images/type1.jpg) no-repeat center top;
+        }
+        .types-of-repair__item2{
+            background:url(../assests/images/type2.jpg) no-repeat center top;
+        }
+        .types-of-repair__item3{
+            background:url(../assests/images/type3.jpg) no-repeat center top;
+        }
+        .types-of-repair__tblock{
+            background:$color;
+            margin:75% 7% 0;
+        }
     }
 }

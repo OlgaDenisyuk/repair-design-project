@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Repair Design Project</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="sass/style.css"> 
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
 <body>
@@ -94,14 +94,14 @@
                                 <li class="project-nav__item">Rostov-on-Don Patriotic</li>
                             </ul>
                        </div> 
-                       <div class="projects-slides">
-                            <div class="projects-slides__item1">
+                       <div class="projects-slides-container">
+                            <div class="projects-slides-container__item1">
                                 <img src="./assests/images/slide1.jpg" alt="Rostov-on-Don, Admiral">
                             </div>
-                            <div class="projects-slides__item1">
+                            <div class="projects-slides-container__item1">
                                 <img src="./assests/images/slide2.jpg" alt="Sochi Thieves">
                             </div>
-                            <div class="projects-slides__item1">
+                            <div class="projects-slides-container__item1">
                                 <img src="./assests/images/slide1.jpg" alt="Rostov-on-Don Patriotic">
                             </div>
                        </div>
@@ -114,9 +114,82 @@
                 <div class="online-control">
                     Online control
                 </div>
+                <div class="video-container">
+                    <iframe width="817" height="434" src="https://www.youtube.com/embed/Btkt0F7O-O8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </section>
             <section class="types-of-repair-section">
-                    <h3>Types of repair</h3>
+                <p class="types-of-repair-section__descr">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities!
+                        <br>Leave a request below and you will receive a link to the broadcast.</p>
+                <form class="types-of-repair__form" name="regform" method="GET" action="#">
+                    <div class="types-of-repair__wrap">
+                        <div>
+                            <label for="name">Name</label><br>
+                            <input id="name" type="text" placeholder="What is your name:" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label><br>
+                            <input id="phone" type="text" placeholder="Your phone number:" required>
+                        </div>
+                        <div>
+                            <button type="submit">SUBMIT</button>
+                        </div>
+                    </div>
+                    <p class="types-of-repair__agreement">
+                        <label for="agree">
+                            <input id="agree" type="checkbox">
+                            <span>I agree to the processing of personal data</span>
+                        </label>
+                    </p>
+                </form>
+                    <div class="types-of-repair__hdr">Types of repair</div> 
+                    <div class="types-of-repair__content">
+                        <div class="types-of-repair__item1">
+                            <div class="types-of-repair__tblock">
+                                <h4>Redecorating</h4>
+                                <ul>
+                                    <li>Dismantling of old coatings</li>
+                                    <li>Wallpapering</li>
+                                    <li>Painting walls and ceilings</li>
+                                    <li>Laying flooring</li>
+                                    <li>Replacing plumbing</li>
+                                    <li>Replacing sockets and switches</li>
+                                    <li>Replacing doors</li>
+                                </ul>
+                                <div class="price">from 900 rub / m2</div>
+                            </div>
+                        </div>
+                        <div class="types-of-repair__item2">
+                                <div class="types-of-repair__tblock">
+                                    <h4>Overhaul</h4>
+                                    <ul>
+                                        <li>Dismantling of old coatings</li>
+                                        <li>Wallpapering</li>
+                                        <li>Painting walls and ceilings</li>
+                                        <li>Laying flooring</li>
+                                        <li>Replacing plumbing</li>
+                                        <li>Replacing sockets and switches</li>
+                                        <li>Replacing doors</li>
+                                    </ul>
+                                    <div class="price">from 1800 rub / m2</div>
+                                </div>
+                            </div>
+                            <div class="types-of-repair__item3">
+                                    <div class="types-of-repair__tblock">
+                                        <h4>Designer Repair</h4>
+                                        <ul>
+                                            <li>Dismantling of old coatings</li>
+                                            <li>Wallpapering</li>
+                                            <li>Painting walls and ceilings</li>
+                                            <li>Laying flooring</li>
+                                            <li>Replacing plumbing</li>
+                                            <li>Replacing sockets and switches</li>
+                                            <li>Replacing doors</li>
+                                        </ul>
+                                        <div class="price">from 4000 rub / m2</div>
+                                    </div>
+                                </div>
+                    </div>
             </section>
             <section class="your-fantasies-section">
                     <h3>We realize your wildest fantasies</h3>
