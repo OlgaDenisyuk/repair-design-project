@@ -2,9 +2,11 @@
 @font-face {
   font-family: "FuturaBookC";
   src: url("./assests/font/Futurabookc.otf") format("opentype"); }
+
 @font-face {
   font-family: "Futurademic";
   src: url("./assests/font/FuturaDemic.otf") format("opentype"); }
+
 body {
   background: #131313;
   color: #FFFFFF;
@@ -219,7 +221,8 @@ header {
       justify-content: space-between;
       align-items: center;
       justify-content: flex-start;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      margin-bottom: 60px; }
       .completed-projects-section .projects-slides .projects-slides__info .information .information__item {
         width: 42%;
         margin-bottom: 35px;
@@ -232,6 +235,27 @@ header {
           font-family: "Yeseva One", cursive;
           font-size: 18px;
           margin-bottom: 5px; }
+    .completed-projects-section .projects-slides .projects-slides__info .pagination span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 15px;
+      cursor: pointer; }
+      .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__left, .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__right {
+        background: url(./assests/images/vector.png) no-repeat 0 0;
+        width: 42px;
+        height: 14px;
+        margin-right: 25px; }
+      .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__right {
+        transform: rotate(180deg);
+        margin-right: 0;
+        margin-left: 10px; }
+      .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__item {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #5a5a5a; }
+        .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__item.pagination__item_active, .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__item:hover {
+          background: #FFFFFF; }
   .completed-projects-section .projects-slides .projects-slides__visual {
     padding-top: 59px;
     width: 845px;
@@ -262,7 +286,8 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative; }
+      position: relative;
+      margin-bottom: 35px; }
       .completed-projects-section .projects-slides .projects-slides__visual .projects-slides .projects-slides__item1 {
         width: 679px;
         margin-right: 20px; }
@@ -272,17 +297,30 @@ header {
       position: relative;
       top: -50%; }
       .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span {
-        background: url(./assests/images/nav_btn.png) no-repeat center center;
+        background: #E3B873 url(./assests/images/nav.png) no-repeat center center;
         display: block;
         position: absolute;
         width: 55px;
         height: 55px;
+        border-radius: 50%;
         cursor: pointer;
         margin-top: 27px;
-        text-indent: -9999px; }
+        text-indent: -9999px;
+        box-shadow: 0 0 5px #E3B873; }
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span:hover {
+          box-shadow: 0 0 10px #FFFFFF; }
         .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__prev {
           display: none; }
         .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__next {
           right: 45px; }
 
-/*# sourceMappingURL=style.css.map */
+.completed-projects-section .online-control {
+  background: url(./assests/images/online.png) no-repeat center bottom;
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 315px;
+  font-size: 20px;
+  line-height: 1.3; }

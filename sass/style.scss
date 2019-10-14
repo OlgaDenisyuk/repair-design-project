@@ -252,6 +252,7 @@ header{
                 @include flex();
                 justify-content: flex-start;
                 flex-wrap: wrap;
+                margin-bottom:60px;
                 .information__item{
                     width:42%;
                     margin-bottom: 35px;
@@ -263,6 +264,34 @@ header{
                         @include headers();
                         font-size: 18px;
                         margin-bottom: 5px;
+                    }
+                }
+            }
+            .pagination{
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                    cursor: pointer;
+                    &.pagination__left, &.pagination__right{
+                        background: url(./assests/images/vector.png) no-repeat 0 0;
+                        width:42px;
+                        height: 14px;
+                        margin-right: 25px;
+                    }
+                    &.pagination__right{
+                        transform: rotate(180deg);
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                    &.pagination__item{
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: #5a5a5a;
+                        &.pagination__item_active, &:hover{
+                            background: $color;
+                        }
                     }
                 }
             }
@@ -295,6 +324,7 @@ header{
             .projects-slides{
                 @include flex();
                 position: relative;
+                margin-bottom: 35px;
                 .projects-slides__item1{
                     width:679px;
                     margin-right: 20px;
@@ -306,14 +336,19 @@ header{
                 position: relative;
                 top: -50%;
                 span{
-                    background: url(./assests/images/nav_btn.png) no-repeat center center;
+                    background:$actcolor url(./assests/images/nav.png) no-repeat center center;
                     display: block;
                     position: absolute;
                     width: 55px;
                     height: 55px;
+                    border-radius: 50%;
                     cursor: pointer;
                     margin-top:27px;
                     text-indent: -9999px;
+                    box-shadow: 0 0 5px $actcolor;
+                    &:hover{
+                        box-shadow: 0 0 10px $color;
+                    }
                     &.projects-navigation__prev{
                         display: none;
                     }
@@ -323,5 +358,15 @@ header{
                 } 
             }  
         }       
+    }
+    .online-control{
+        background: url(./assests/images/online.png) no-repeat center bottom;
+        @include headers();
+        max-width: 200px;
+        text-align: center;
+        margin: 0 auto; 
+        padding-bottom: 415px;  
+        font-size: 20px;
+        line-height: 1.3;
     }
 }
