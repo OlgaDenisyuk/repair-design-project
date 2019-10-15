@@ -29,6 +29,7 @@ $logofont:'Futurademic';
     border: none;
     cursor: pointer;
     border-radius: 3px;
+    box-shadow: 10px 10px 10px #E3B87352;
     &:hover{
         box-shadow: inset 0 0 14px #FFFFFF;
     }
@@ -179,6 +180,7 @@ header{
                 &.calculate-block__form_submit{
                     background: none;
                     border: 1px solid $color;
+                    box-shadow: none;
                 }
             }
         }
@@ -477,7 +479,102 @@ header{
         }
         .types-of-repair__tblock{
             background:$color;
-            margin:75% 7% 0;
+            margin:75% 8% 0;
+            padding:25px 29px 49px 34px;
+            position: relative;
+            box-shadow: 10px 10px 10px #80808005;
+            &.active{
+                background: #f9f9f9;
+            }
+            h4{
+                font-family: $hfont;
+                font-size: 20px;
+                margin: 0 0 10px;
+            }
+            ul{
+                color:#959595;
+                font-size: 15px;
+                list-style: disc;
+                list-style-position: inside;
+                li{
+                    margin-bottom: 8px;
+                }
+            }
+            .price{
+                @include btn();
+                @include flex();
+                justify-content: space-around;
+                position: absolute;
+                left:0;
+                bottom:-27px;
+                height: 54px;
+                width:228px;
+                border-radius: 0;
+                font-weight: bold; 
+                font-size: 18px;
+                cursor: default;
+                &:hover{
+                    box-shadow: none;
+                }    
+            }
+        }
+    }
+    .measurements{
+        margin:0 0 130px;
+        @include flex();
+        .measurements__steps{
+            position: relative;
+            background: url(../assests/images/measure.png) no-repeat right 0;
+            height: 692px;
+            max-width: 780px;
+            width:60%;
+            font-size: 18px;
+            & > div{
+                position: absolute;
+                display: flex;
+                &::before{
+                    @include after();
+                    width:42px;
+                    height: 42px;
+                    line-height:42px;
+                    border-radius:50%;
+                    color:$color;
+                    font-family: $hfont;
+                    text-align: center;
+                    position: relative;
+                    left: -15px;
+                    min-width: 42px;
+                }
+                &.measurements__step1{
+                    top:117px;
+                    right:0px;
+                    width:407px;
+                    &::before{
+                        content:"01";
+                    }
+                }
+                &.measurements__step2{
+                    top: 228px;
+                    right: 194px;
+                    &::before{
+                        content:"02";
+                    }
+                }
+                &.measurements__step3{
+                    top: 389px;
+                    right: 150px;
+                    &::before{
+                        content:"03";
+                    }
+                }
+                &.measurements__step4{
+                    bottom: 101px;
+                    right: 122px;
+                    &::before{
+                        content:"04";
+                    }
+                }
+            }
         }
     }
 }
