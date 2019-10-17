@@ -16,6 +16,8 @@ body {
   color: #FFFFFF;
   font-family: "FuturaBookC";
   height: 100vh;
+  font-size: 15px;
+  line-height: 138.6%;
 }
 
 a {
@@ -46,6 +48,7 @@ p {
 h2 {
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   margin: 0 0 20px;
   font-size: 40px;
   line-height: 132.8%;
@@ -57,10 +60,10 @@ h2 span {
 h3 {
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   color: #E3B873;
   margin: 0 0 30px;
   font-size: 27px;
-  line-height: 138.6%;
 }
 
 button {
@@ -205,6 +208,7 @@ header .navbar ul li a:hover {
 .calculate-section .scroll-panel {
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   background: #131313;
   cursor: pointer;
   height: 97px;
@@ -277,7 +281,6 @@ header .navbar ul li a:hover {
 .completed-projects-section .projects-slides .projects-slides__info .information .information__item {
   width: 42%;
   margin-bottom: 35px;
-  font-size: 15px;
   padding-right: 2%;
   box-sizing: border-box;
 }
@@ -285,6 +288,7 @@ header .navbar ul li a:hover {
   color: #E3B873;
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   font-size: 18px;
   margin-bottom: 5px;
 }
@@ -331,6 +335,7 @@ header .navbar ul li a:hover {
 .completed-projects-section .projects-slides .projects-slides__visual .project-nav li {
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   opacity: 0.3;
   margin-right: 60px;
   cursor: pointer;
@@ -387,6 +392,7 @@ header .navbar ul li a:hover {
   background: url(../assests/images/online.png) no-repeat center bottom;
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   max-width: 200px;
   text-align: center;
   padding-bottom: 40px;
@@ -506,6 +512,7 @@ header .navbar ul li a:hover {
   background: url(../assests/images/types.png) no-repeat center bottom;
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   max-width: 200px;
   text-align: center;
   padding-bottom: 40px;
@@ -518,6 +525,7 @@ header .navbar ul li a:hover {
   margin: 0 auto;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 125px;
@@ -554,6 +562,21 @@ header .navbar ul li a:hover {
 }
 .types-of-repair-section .types-of-repair__content .types-of-repair__tblock ul li {
   margin-bottom: 8px;
+}
+.types-of-repair-section .types-of-repair__content .types-of-repair__tblock .position {
+  color: #959595;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.types-of-repair-section .types-of-repair__content .types-of-repair__tblock .experience {
+  font-family: "Yeseva One", cursive;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #E3B873;
+  height: 44px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 44px;
 }
 .types-of-repair-section .types-of-repair__content .types-of-repair__tblock .price {
   text-transform: uppercase;
@@ -768,6 +791,7 @@ header .navbar ul li a:hover {
 .your-fantasies-section .your-fantasies-section__navigator h3 {
   text-transform: uppercase;
   font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
 }
 .your-fantasies-section .your-fantasies-section__navigator ul {
   padding-top: 15px;
@@ -817,14 +841,15 @@ header .navbar ul li a:hover {
   padding-top: 152px;
 }
 .design-project-section .design-project-section__hdr {
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
   max-width: 200px;
   text-align: center;
   padding-bottom: 40px;
   font-size: 20px;
   line-height: 1.3;
   margin: 0 auto 30px;
-  text-transform: uppercase;
-  font-family: "Yeseva One", cursive;
   background: url(../assests/images/des.png) no-repeat center bottom;
   margin: 0 auto 23px;
 }
@@ -840,9 +865,13 @@ header .navbar ul li a:hover {
   margin: 0 auto;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   align-items: flex-start;
+  position: relative;
+  top: 465px;
+  margin-top: -465px;
 }
 .design-project-section .design-project-section__content > div {
   width: 31.7%;
@@ -877,6 +906,21 @@ header .navbar ul li a:hover {
 .design-project-section .design-project-section__content .design-project-section__tblock ul li {
   margin-bottom: 8px;
 }
+.design-project-section .design-project-section__content .design-project-section__tblock .position {
+  color: #959595;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.design-project-section .design-project-section__content .design-project-section__tblock .experience {
+  font-family: "Yeseva One", cursive;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #E3B873;
+  height: 44px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 44px;
+}
 .design-project-section .design-project-section__content .design-project-section__tblock .price {
   text-transform: uppercase;
   color: #FFFFFF;
@@ -891,6 +935,332 @@ header .navbar ul li a:hover {
   font-size: 18px;
   line-height: 54px;
   text-align: center;
+}
+
+.goal-section {
+  max-width: 1236px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  padding-top: 440px;
+}
+.goal-section .goal-section__steps {
+  width: 340px;
+}
+.goal-section .goal-section__steps .h3 {
+  font-family: "Futurademic";
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.goal-section .goal-section__steps h3 {
+  width: 253px;
+  position: relative;
+  margin-bottom: 90px;
+}
+.goal-section .goal-section__steps h3::after {
+  content: "";
+  height: 1px;
+  background: #E3B873;
+  display: inline-block;
+  vertical-align: middle;
+  width: 92px;
+  position: absolute;
+  right: 0px;
+  bottom: 18px;
+}
+.goal-section .goal-section__steps .steps {
+  font: 18px "Yeseva One", cursive;
+  margin-bottom: 18px;
+}
+.goal-section .goal-section__steps .step_hdr {
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
+  color: #E3B873;
+  margin-bottom: 18px;
+}
+.goal-section .goal-section__steps p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.goal-section .goal-section__steps .pagination {
+  margin-top: 80px;
+}
+.goal-section .goal-section__steps .pagination span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.goal-section .goal-section__steps .pagination span.pagination__left, .goal-section .goal-section__steps .pagination span.pagination__right {
+  background: url(../assests/images/vector.png) no-repeat 0 0;
+  width: 42px;
+  height: 14px;
+  margin-right: 25px;
+}
+.goal-section .goal-section__steps .pagination span.pagination__right {
+  transform: rotate(180deg);
+  margin-right: 0;
+  margin-left: 10px;
+}
+.goal-section .goal-section__steps .pagination span.pagination__item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5a5a5a;
+}
+.goal-section .goal-section__steps .pagination span.pagination__item.pagination__item_active, .goal-section .goal-section__steps .pagination span.pagination__item:hover {
+  background: #FFFFFF;
+}
+.goal-section .goal-section__content {
+  max-width: 765px;
+  margin-top: 92px;
+}
+.goal-section .goal-section__content .goal-section__navigator {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.goal-section .goal-section__content .goal-section__navigator > div {
+  width: 31.7%;
+}
+.goal-section .goal-section__content .goal-section__navigator > div {
+  margin-bottom: 35px;
+  opacity: 0.3;
+  cursor: pointer;
+  max-width: 136px;
+  margin-right: 12%;
+}
+.goal-section .goal-section__content .goal-section__navigator > div:nth-child(3n) {
+  margin-right: 0;
+  max-width: 100px;
+}
+.goal-section .goal-section__content .goal-section__navigator > div.goal-section__step_active, .goal-section .goal-section__content .goal-section__navigator > div:hover {
+  opacity: 1;
+}
+.goal-section .goal-section__content .goal-section__navigator > div .goal-step__nmb {
+  border-bottom: 1px solid #E3B873;
+  font-family: "Yeseva One", cursive;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.team-section {
+  padding-top: 95px;
+  position: relative;
+  bottom: -502px;
+  z-index: 2;
+  margin-top: -502px;
+}
+.team-section .team-section__hdr {
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
+  max-width: 200px;
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 auto 30px;
+  background: url(../assests/images/team.png) no-repeat center bottom;
+  margin: 0 auto 23px;
+}
+.team-section .team-section__descr {
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto 90px;
+  max-width: 470px;
+}
+.team-section .team-section__descr.about {
+  position: relative;
+  max-width: 560px;
+  color: #363636;
+  margin-bottom: 0;
+}
+.team-section .team-section__descr.about::before {
+  content: "";
+  height: 1px;
+  background: #E3B873;
+  display: inline-block;
+  vertical-align: middle;
+  width: 55px;
+  position: absolute;
+  left: 50%;
+  margin-left: -28px;
+  top: -35px;
+  top: -15px;
+}
+.team-section .team-section__people {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1030px;
+  margin: 0 auto 60px;
+  align-items: flex-start;
+}
+.team-section .team-section__people > div {
+  width: 31.7%;
+}
+.team-section .team-section__people > div {
+  width: 26.55%;
+  max-width: 270px;
+  position: relative;
+}
+.team-section .team-section__people > div::after {
+  content: "";
+  height: 1px;
+  background: #E3B873;
+  display: inline-block;
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  box-shadow: 0px 3px 10px #E3B87392;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.team-section .team-section__people .team-section__item1 {
+  background: url(../assests/images/person1.jpg) no-repeat center top;
+}
+.team-section .team-section__people .team-section__item1::after {
+  background-image: url(../assests/images/pers1.png);
+}
+.team-section .team-section__people .team-section__item2 {
+  background: url(../assests/images/person2.jpg) no-repeat center top;
+}
+.team-section .team-section__people .team-section__item2::after {
+  background-image: url(../assests/images/pers2.png);
+}
+.team-section .team-section__people .team-section__item3 {
+  background: url(../assests/images/person3.jpg) no-repeat center top;
+}
+.team-section .team-section__people .team-section__item3::after {
+  background-image: url(../assests/images/pers3.png);
+}
+.team-section .team-section__people .team-section__tblock {
+  background: #FFFFFF;
+  margin: 75% 8% 0;
+  padding: 25px 29px 49px 34px;
+  position: relative;
+  box-shadow: 10px 10px 10px #80808005;
+  margin: 102% 8% 0;
+  padding: 22px 0 0;
+  text-align: center;
+  color: #181818;
+}
+.team-section .team-section__people .team-section__tblock h4 {
+  font-family: "Yeseva One", cursive;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+.team-section .team-section__people .team-section__tblock ul {
+  color: #959595;
+  font-size: 15px;
+  list-style: disc;
+  list-style-position: inside;
+}
+.team-section .team-section__people .team-section__tblock ul li {
+  margin-bottom: 8px;
+}
+.team-section .team-section__people .team-section__tblock .position {
+  color: #959595;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.team-section .team-section__people .team-section__tblock .experience {
+  font-family: "Yeseva One", cursive;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #E3B873;
+  height: 44px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 44px;
+}
+.team-section .team-section__people .team-section__tblock .price {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #E3B873;
+  box-shadow: 10px 10px 10px #E3B87332;
+  position: absolute;
+  left: 0;
+  bottom: -27px;
+  height: 54px;
+  width: 228px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 54px;
+  text-align: center;
+}
+
+.client-section {
+  padding-top: 590px;
+  background: #FFFFFF url(../assests/images/BACKGROUND_LINE.jpg) no-repeat center 0;
+  color: #363636;
+}
+.client-section .client-section__hdr {
+  text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
+  line-height: 138.6%;
+  max-width: 200px;
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 auto 30px;
+  background: url(../assests/images/clients.png) no-repeat center bottom;
+}
+.client-section .client-section__descr {
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto 40px;
+}
+.client-section .client-section__content {
+  max-width: 1236px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.client-section .client-section__content > div {
+  width: 31.7%;
+}
+.client-section .client-section__content > div {
+  width: 30.43%;
+  background: #FFFFFF;
+  box-shadow: 0 0 22px #bcabab33;
+}
+.client-section .client-section__content > div .client-section__tblock {
+  padding: 20px 32px 0 20px;
+  position: relative;
+}
+.client-section .client-section__content > div .client-section__tblock h4 {
+  font-family: "Yeseva One", cursive;
+  font-size: 20px;
+  margin: 0 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.client-section .client-section__content > div .client-section__tblock p {
+  color: #959595;
 }
 
 /*# sourceMappingURL=style.css.map */

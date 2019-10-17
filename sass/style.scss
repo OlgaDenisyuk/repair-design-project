@@ -15,8 +15,11 @@
 $bgcolor: #131313;
 $color: #FFFFFF;
 $graycolor:#363636;
+$ltgraycolor:#959595;
 $actcolor:#E3B873;
 $navsize: 14px;
+$mainsize: 15px;
+$hdrsize:18px;
 $listsize: 20px;
 $hfont:'Yeseva One', cursive;
 $mainfont:'FuturaBookC';
@@ -28,6 +31,10 @@ $navfont:'ProximaNova';
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+@mixin lightbox()  {
+    background: #FFFFFF url(../assests/images/BACKGROUND_LINE.jpg) no-repeat center 0;
+    color: $graycolor;
 }
 @mixin btn() {
     text-transform: uppercase;
@@ -43,15 +50,29 @@ $navfont:'ProximaNova';
 }
 @mixin headers {
     text-transform: uppercase;
-    font-family: $hfont;   
+    font-family: $hfont; 
+    line-height: 138.6%; 
 }
 @mixin section-headers{
+    @include headers();
     max-width: 200px;
     text-align: center;
     padding-bottom: 40px;  
     font-size: 20px;
     line-height: 1.3;
     margin: 0 auto 30px;
+}
+@mixin descr-before() {
+    content: "";
+    height: 1px;
+    background: #E3B873;
+    display: inline-block;
+    vertical-align: middle;
+    width: 55px;
+    position: absolute;
+    left: 50%;
+    margin-left: -28px;
+    top: -35px;
 }
 @mixin after() {
     content: "";
@@ -112,6 +133,7 @@ $navfont:'ProximaNova';
 @mixin flex-col-3(){
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center; 
     & > div{
@@ -125,18 +147,33 @@ $navfont:'ProximaNova';
     position: relative;
     box-shadow: 10px 10px 10px #80808005;   
     h4{
-        font-family: "Yeseva One", cursive;
+        font-family:$hfont;
         font-size: 20px;
         margin: 0 0 10px;
     }
     ul{
-        color: #959595;
+        color:$ltgraycolor;
         font-size: 15px;
         list-style: disc;
         list-style-position: inside;
         li{
             margin-bottom: 8px;
         }
+    }
+    .position{
+        color: $ltgraycolor; 
+        font-size: $hdrsize;
+        margin-bottom:24px;
+    }
+    .experience{
+        font-family:$hfont;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #E3B873;
+        height: 44px;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 44px;
     }
     .price{
         text-transform: uppercase;
@@ -149,9 +186,52 @@ $navfont:'ProximaNova';
         height: 54px;
         width: 228px;
         font-weight: bold;
-        font-size: 18px;
+        font-size: $hdrsize;
         line-height: 54px;
         text-align: center;
+    }
+}
+@mixin section-hdr() {
+    width: 253px;
+    position: relative;
+    &::after{
+            content: "";
+            height: 1px;
+            background: #E3B873;
+            display: inline-block;
+            vertical-align: middle;
+            width: 92px;
+            position: absolute;
+            right: 0px;
+            bottom: 18px;
+    }
+}
+@mixin pagination() {
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+        cursor: pointer;
+        &.pagination__left, &.pagination__right{
+            background: url(../assests/images/vector.png) no-repeat 0 0;
+            width:42px;
+            height: 14px;
+            margin-right: 25px;
+        }
+        &.pagination__right{
+            transform: rotate(180deg);
+            margin-right: 0;
+            margin-left: 10px;
+        }
+        &.pagination__item{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #5a5a5a;
+            &.pagination__item_active, &:hover{
+                background: $color;
+            }
+        }
     }
 }
 body{
@@ -159,6 +239,9 @@ body{
     color: $color; 
     font-family: $mainfont;
     height: 100vh;
+    font-size: $mainsize;
+    line-height: 138.6%; 
+
 }
 a{
     color: inherit;
@@ -195,7 +278,6 @@ h3{
     color: $actcolor;
     margin:0 0 30px;
     font-size: 27px;
-    line-height: 138.6%;
 }
 button{
     @include btn();
@@ -356,7 +438,7 @@ header{
                 }
             }
             p{
-                font-size: 18px;
+                font-size: $hdrsize;
                 line-height: 1.52;
                 margin-bottom: 40px;
             }
@@ -368,44 +450,18 @@ header{
                 .information__item{
                     width:42%;
                     margin-bottom: 35px;
-                    font-size: 15px;
                     padding-right: 2%;
                     box-sizing: border-box;
                     .hdr{
                         color:$actcolor;
                         @include headers();
-                        font-size: 18px;
+                        font-size: $hdrsize;
                         margin-bottom: 5px;
                     }
                 }
             }
             .pagination{
-                span{
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 15px;
-                    cursor: pointer;
-                    &.pagination__left, &.pagination__right{
-                        background: url(../assests/images/vector.png) no-repeat 0 0;
-                        width:42px;
-                        height: 14px;
-                        margin-right: 25px;
-                    }
-                    &.pagination__right{
-                        transform: rotate(180deg);
-                        margin-right: 0;
-                        margin-left: 10px;
-                    }
-                    &.pagination__item{
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        background: #5a5a5a;
-                        &.pagination__item_active, &:hover{
-                            background: $color;
-                        }
-                    }
-                }
+              @include pagination();
             }
         }
         .projects-slides__visual{
@@ -473,7 +529,6 @@ header{
     }
     .online-control{
         background: url(../assests/images/online.png) no-repeat center bottom;
-        @include headers();
         @include section-headers();
     }
     .video-container{
@@ -486,8 +541,7 @@ header{
     }
 }
 .types-of-repair-section{
-    background: $color url(../assests/images/BACKGROUND_LINE.jpg) no-repeat center 0;
-    color:$graycolor;
+    @include lightbox();
     position: relative;
     padding-top: 98px+219px;
     padding-bottom:240px;
@@ -497,12 +551,7 @@ header{
         margin:0 auto 90px;
         position: relative;
         &::before{
-            @include after();
-            width:55px;
-            position: absolute;
-            left: 50%;
-            margin-left: -28px;
-            top: -35px;
+            @include descr-before();
         }
     }
     .types-of-repair__form{
@@ -522,7 +571,7 @@ header{
             @include btn();
             width:200px;
             height:51px;
-            font-size: 15px;
+            font-size: $mainsize;
         }
     }
     .types-of-repair__agreement{
@@ -532,7 +581,6 @@ header{
     }
     .types-of-repair__hdr{
         background: url(../assests/images/types.png) no-repeat center bottom;
-        @include headers();
         @include section-headers();
     }
     .types-of-repair__content{
@@ -568,7 +616,7 @@ header{
             max-width: 780px;
             width:60%;
             margin-right: 3.7%;
-            font-size: 18px;
+            font-size: $hdrsize;
             & > div{
                 position: absolute;
                 display: flex;
@@ -741,7 +789,6 @@ header{
     padding-top:152px;
     .design-project-section__hdr{
         @include section-headers();
-        @include headers();
         background: url(../assests/images/des.png) no-repeat center bottom;
         margin:0 auto 23px;
     }
@@ -754,6 +801,9 @@ header{
         @include center-block();
         @include flex-col-3();
         align-items: flex-start;
+        position: relative;
+        top: 465px;
+        margin-top: -465px;
         .design-project-section__item1{
             background: url(../assests/images/des1.jpg) no-repeat center 0;
         }
@@ -766,5 +816,180 @@ header{
         .design-project-section__tblock{
             @include tblock();
         }
+    }
+}
+.goal-section{
+    @include center-block();
+    @include flex();
+    align-items: flex-start;
+    padding-top:440px;
+    .goal-section__steps{
+        width:340px;
+        .h3{
+            font-family: $logofont;
+            text-transform: uppercase;
+            margin-bottom:15px;
+        }
+        h3{
+            @include section-hdr();
+            margin-bottom:90px;
+        }
+        .steps{
+            font:$hdrsize $hfont;
+            margin-bottom:$hdrsize;
+        }
+        .step_hdr{
+            @include headers();
+            color:$actcolor;
+            margin-bottom:$hdrsize;
+        }
+        p{
+            margin-bottom:10px;
+            line-height: 1.6;
+        }
+        .pagination{
+            @include pagination();
+            margin-top:80px;
+        }
+    }
+    .goal-section__content{
+        max-width: 765px;
+        margin-top:92px;
+        .goal-section__navigator{
+            @include flex-col-3();
+            align-items: flex-start;
+            margin-bottom:15px;
+            & > div{
+                margin-bottom:35px;
+                opacity: 0.3;
+                cursor: pointer;
+                max-width: 136px;
+                margin-right: 12%;
+                &:nth-child(3n){
+                    margin-right: 0;
+                    max-width: 100px;
+                }
+                &.goal-section__step_active, &:hover{
+                    opacity: 1;
+                }
+                .goal-step__nmb{
+                    border-bottom: 1px solid $actcolor;
+                    font-family: $hfont;
+                    margin-bottom:5px;
+                    display:inline-block;
+                }
+            }
+        }
+    }
+}
+.team-section{
+    padding-top:95px;
+    position: relative;
+    bottom: -502px;
+    z-index: 2;
+    margin-top: -502px;
+    .team-section__hdr{
+        @include section-headers();
+        background: url(../assests/images/team.png) no-repeat center bottom;
+        margin:0 auto 23px;
+    }
+    .team-section__descr{
+        @include descr();
+        margin:0 auto 90px;
+        max-width:470px;
+        &.about{
+            position: relative;
+            max-width: 560px;
+            color:$graycolor;
+            margin-bottom:0;
+            &::before{
+                @include descr-before();
+                top:-15px;
+            }
+        }
+    }
+    .team-section__people{
+        @include flex-col-3();
+        max-width: 1030px;
+        margin:0 auto 60px;
+        align-items: flex-start;
+        & > div{
+            width: 26.55%;
+            max-width: 270px;
+            position: relative;
+            &::after{
+                @include after();
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top:-35px;
+                left:-35px;
+                box-shadow: 0px 3px 10px #E3B87392;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }   
+        }
+
+        .team-section__item1{
+            background: url(../assests/images/person1.jpg) no-repeat center top;
+            &::after{
+                background-image: url(../assests/images/pers1.png);
+            }
+        }
+        .team-section__item2{
+            background: url(../assests/images/person2.jpg) no-repeat center top;
+            &::after{
+                background-image: url(../assests/images/pers2.png);
+            }
+        }
+        .team-section__item3{
+            background: url(../assests/images/person3.jpg) no-repeat center top;
+            &::after{
+                background-image: url(../assests/images/pers3.png);
+            }
+        }
+        .team-section__tblock{
+            @include tblock();
+            margin: 102% 8% 0;
+            padding: 22px 0 0;
+            text-align: center;
+            color:#181818;
+        }
+    }
+}
+.client-section{
+    padding-top: 590px;
+    @include lightbox();
+    .client-section__hdr{
+        @include section-headers();
+        background: url(../assests/images/clients.png) no-repeat center bottom;
+    }
+    .client-section__descr{
+        @include descr();
+        max-width:350px;
+        margin:0 auto 40px;
+    }
+    .client-section__content{
+        @include center-block();
+        @include flex-col-3();
+        &> div {
+            width: 30.43%;
+            background: $color;
+            box-shadow: 0 0 22px #bcabab33;
+            .client-section__tblock{
+                padding:20px 32px 0 20px;
+                position: relative;
+                h4{
+                    font-family:$hfont;
+                    font-size: 20px;
+                    margin: 0 0 20px;
+                    @include flex();
+                }
+                p{
+                    color:$ltgraycolor;
+                }
+            }   
+        }
+
     }
 }
