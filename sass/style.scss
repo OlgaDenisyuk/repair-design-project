@@ -16,9 +16,11 @@ $bgcolor: #131313;
 $color: #FFFFFF;
 $graycolor:#363636;
 $ltgraycolor:#959595;
+$darkgraycolor:#181818;
 $actcolor:#E3B873;
 $navsize: 14px;
 $mainsize: 15px;
+$valuesize: 17px;
 $hdrsize:18px;
 $listsize: 20px;
 $hfont:'Yeseva One', cursive;
@@ -953,13 +955,29 @@ header{
             margin: 102% 8% 0;
             padding: 22px 0 0;
             text-align: center;
-            color:#181818;
+            color:$darkgraycolor;
         }
     }
 }
 .client-section{
     padding-top: 590px;
+    padding-bottom: 360px;
+    position: relative;
     @include lightbox();
+    .client-section__left-bg, .client-section__right-bg{
+        position: absolute;
+        bottom: 0;
+        height:776px;
+        width:50%;
+    }
+    .client-section__left-bg{
+        background: url(../assests/images/left_bg.png) no-repeat right top;
+        right:50%;
+    }
+    .client-section__right-bg{
+        left:50%;
+        background: url(../assests/images/right_bg.png) no-repeat left top;
+    }
     .client-section__hdr{
         @include section-headers();
         background: url(../assests/images/clients.png) no-repeat center bottom;
@@ -977,19 +995,143 @@ header{
             background: $color;
             box-shadow: 0 0 22px #bcabab33;
             .client-section__tblock{
-                padding:20px 32px 0 20px;
+                padding:20px 32px 85px 20px;
                 position: relative;
                 h4{
                     font-family:$hfont;
-                    font-size: 20px;
+                    font-size:$hdrsize;
+                    line-height: 127.1%;
+                    color:$darkgraycolor;
                     margin: 0 0 20px;
                     @include flex();
+                    justify-content: flex-start;
+                    img{
+                        min-width:75px;
+                        margin-right:23px;
+                    }
                 }
                 p{
                     color:$ltgraycolor;
+                    margin:0 0 7px;
+                    line-height: 1.7;
+                }
+                .value{
+                    @include flex();
+                    @include headers();
+                    justify-content: center;
+                    font-size: $valuesize;
+                    background: $actcolor; 
+                    color:$color;
+                    width: 294px;
+                    height:54px;
+                    position: absolute;
+                    bottom:-27px;
+                    left:0;
+                    box-shadow: 10px 10px 10px #E3B87332;
+                    .value__area{
+                        border-right:1px solid $color;
+                        height: 100%;
+                        line-height: 54px;
+                        background: url(../assests/images/area.png) no-repeat 0 center;
+                        padding-left: 47px;
+                        padding-right: 17px;
+                    }
+                    .value__days{
+                        height: 100%;
+                        line-height: 54px;
+                        background: url(../assests/images/days.png) no-repeat 0 center;
+                        padding-left: 47px;
+                        margin-left:17px;
+                        width: 27%;
+                    }
                 }
             }   
         }
 
+    }
+}
+.map-section{
+    height:953px;
+    background: url(../assests/images/map-section.jpg) no-repeat center bottom;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        background: $darkgraycolor;
+        opacity: 0.9;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+    }
+    .map-section__form{
+        background: $darkgraycolor;
+        position: absolute;
+        top:-(445px / 2);
+        left:50%;
+        margin-left:-(883px / 2);
+        max-width:883px;
+        width:100%;
+        padding:34px 0;
+        box-sizing: border-box;
+        height: 445px;
+        form{
+            margin:0 auto;
+            max-width: 520px;
+            h4{
+                text-align: center;
+                @include section-headers();
+                max-width: 100%;
+                margin:0;
+            }
+            .map-section__data{
+                @include flex();
+                flex-wrap: wrap;
+                .data1, .data2{width: 44.45%;margin-bottom: 45px;}
+                .data3{width:100%;margin-bottom: 45px;}
+                label{
+                    @include label();
+                }
+                input[type="text"]{
+                    @include field();
+                    background: none;
+                    color: $color;
+                    width:100%;
+                    border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+                }
+            }
+            .questions__agreement{
+                @include agreement();
+                text-align: center;
+                margin-bottom:50px;
+            }
+            button{
+                width: 200px;
+                height: 51px;
+                border-radius: 0;
+                margin:0 auto;
+                display: block;
+            }
+        }
+    }
+    .map-section__content{
+        position: relative;
+        text-align: center;
+        padding-top:270px;
+        h3{
+            font-size: $listsize;
+            margin:0 auto 25px;
+            max-width:590px;
+        }
+        .map-section__communication{
+            margin-bottom: 43px;
+            line-height: 0;
+        }
+        .map-section__communication a{
+            display: inline-block;
+            margin: 0 7px;
+            vertical-align: top;
+        }
     }
 }
