@@ -34,7 +34,7 @@ p {
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
-  border: 1px solid #FFFFFF; }
+  /*border: 1px solid #FFFFFF;*/ }
 
 h2 {
   text-transform: uppercase;
@@ -79,7 +79,8 @@ header {
     font-size: 1px;
     line-height: 1;
     color: #131313;
-    text-indent: -999px; }
+    text-indent: -999px;
+    position: absolute; }
   header .logo {
     color: #E3B873;
     font-family: "Futurademic";
@@ -111,7 +112,8 @@ header {
     align-items: center;
     width: 325px;
     margin-right: 7.52%;
-    white-space: nowrap; }
+    white-space: nowrap;
+    min-width: 310px; }
     header .callback .callback__link {
       color: #E3B873;
       text-decoration: underline; }
@@ -149,6 +151,8 @@ header {
           background: none;
           border: 1px solid #FFFFFF;
           box-shadow: none; }
+          .calculate-section .project-slide .calculate-block .calculate-block__form button.calculate-block__form_submit:hover {
+            box-shadow: inset 0 0 14px #FFFFFF; }
   .calculate-section .soc-panel {
     height: 82px;
     width: 707px;
@@ -229,26 +233,6 @@ header {
         font-size: 18px;
         line-height: 1.52;
         margin-bottom: 40px; }
-      .completed-projects-section .projects-slides .projects-slides__info .information {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-bottom: 60px; }
-        .completed-projects-section .projects-slides .projects-slides__info .information .information__item {
-          width: 42%;
-          margin-bottom: 35px;
-          padding-right: 2%;
-          box-sizing: border-box; }
-          .completed-projects-section .projects-slides .projects-slides__info .information .information__item .hdr {
-            color: #E3B873;
-            text-transform: uppercase;
-            font-family: "Yeseva One", cursive;
-            line-height: 138.6%;
-            font-size: 18px;
-            margin-bottom: 5px; }
       .completed-projects-section .projects-slides .projects-slides__info .pagination span {
         display: inline-block;
         vertical-align: middle;
@@ -259,6 +243,8 @@ header {
           width: 42px;
           height: 14px;
           margin-right: 25px; }
+          .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__left:hover, .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__right:hover {
+            box-shadow: 0 0 10px #E3B873; }
         .completed-projects-section .projects-slides .projects-slides__info .pagination span.pagination__right {
           transform: rotate(180deg);
           margin-right: 0;
@@ -303,12 +289,12 @@ header {
         align-items: center;
         position: relative;
         margin-bottom: 35px; }
-        .completed-projects-section .projects-slides .projects-slides__visual .projects-slides-container .projects-slides-container__item1 {
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-slides-container > div {
           width: 679px;
           margin-right: 20px; }
       .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation {
         width: 100%;
-        height: 55px;
+        height: 0;
         position: relative;
         top: -50%; }
         .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span {
@@ -319,15 +305,53 @@ header {
           height: 55px;
           border-radius: 50%;
           cursor: pointer;
-          margin-top: 27px;
+          margin-top: 0;
           text-indent: -9999px;
           box-shadow: 0 0 5px #E3B873; }
           .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span:hover {
             box-shadow: 0 0 10px #FFFFFF; }
           .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__prev {
-            display: none; }
+            transform: rotate(180deg);
+            left: 45px; }
           .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__next {
             right: 45px; }
+        @media (max-width: 375px) {
+          .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span {
+            background-size: 6px auto;
+            width: 36px;
+            height: 36px;
+            margin-top: 18px;
+            box-shadow: none;
+            top: -190px; }
+            .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__prev {
+              left: 14px; }
+            .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__next {
+              right: 14px; } }
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__prev {
+          display: none; }
+    .completed-projects-section .projects-slides .information {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 60px; }
+      .completed-projects-section .projects-slides .information .information__item {
+        width: 42%;
+        margin-bottom: 35px;
+        padding-right: 2%;
+        box-sizing: border-box; }
+        .completed-projects-section .projects-slides .information .information__item .hdr {
+          color: #E3B873;
+          text-transform: uppercase;
+          font-family: "Yeseva One", cursive;
+          line-height: 138.6%;
+          font-size: 18px;
+          margin-bottom: 5px; }
+    .completed-projects-section .projects-slides .sm-screen {
+      display: none; }
   .completed-projects-section .online-control {
     background: url(../assests/images/online.png) no-repeat center bottom;
     text-transform: uppercase;
@@ -339,6 +363,9 @@ header {
     font-size: 20px;
     line-height: 1.3;
     margin: 0 auto 30px; }
+    @media (max-width: 375px) {
+      .completed-projects-section .online-control {
+        font-size: 22px; } }
   .completed-projects-section .video-container {
     text-align: center;
     z-index: 2;
@@ -360,6 +387,9 @@ header {
     max-width: 680px;
     margin: 0 auto 90px;
     position: relative; }
+    @media (max-width: 375px) {
+      .types-of-repair-section .types-of-repair-section__descr {
+        font-size: 14px; } }
     .types-of-repair-section .types-of-repair-section__descr::before {
       content: "";
       height: 1px;
@@ -380,8 +410,7 @@ header {
     justify-content: space-between;
     align-items: center; }
     .types-of-repair-section .types-of-repair__wrap label {
-      opacity: 0.5;
-      font-size: 15px; }
+      opacity: 0.5; }
     .types-of-repair-section .types-of-repair__wrap input {
       max-width: 231px;
       font-size: 20px;
@@ -391,19 +420,21 @@ header {
       margin: 0; }
       .types-of-repair-section .types-of-repair__wrap input::placeholder {
         opacity: 1; }
-    .types-of-repair-section .types-of-repair__wrap button {
-      text-transform: uppercase;
-      color: #FFFFFF;
-      background: #E3B873;
-      border: none;
-      cursor: pointer;
-      border-radius: 3px;
-      box-shadow: 10px 10px 10px #E3B87332;
-      width: 200px;
-      height: 51px;
-      font-size: 15px; }
-      .types-of-repair-section .types-of-repair__wrap button:hover {
-        box-shadow: inset 0 0 14px #FFFFFF; }
+  .types-of-repair-section button {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #E3B873;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px #E3B87332;
+    width: 200px;
+    height: 51px;
+    font-size: 15px; }
+    .types-of-repair-section button:hover {
+      box-shadow: inset 0 0 14px #FFFFFF; }
+  .types-of-repair-section .sm-screen {
+    display: none; }
   .types-of-repair-section .types-of-repair__agreement {
     padding-top: 33px;
     text-align: center;
@@ -442,6 +473,9 @@ header {
     font-size: 20px;
     line-height: 1.3;
     margin: 0 auto 30px; }
+    @media (max-width: 375px) {
+      .types-of-repair-section .types-of-repair__hdr {
+        font-size: 22px; } }
   .types-of-repair-section .types-of-repair__content {
     max-width: 1236px;
     margin: 0 auto;
@@ -449,10 +483,17 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 125px; }
     .types-of-repair-section .types-of-repair__content > div {
-      width: 31.7%; }
+      width: 31.7%;
+      max-width: 445px; }
+    @media (max-width: 850px) {
+      .types-of-repair-section .types-of-repair__content {
+        justify-content: center; }
+        .types-of-repair-section .types-of-repair__content > div {
+          width: 100%;
+          margin-bottom: 80px; } }
     .types-of-repair-section .types-of-repair__content .types-of-repair__item1 {
       background: url(../assests/images/type1.jpg) no-repeat center top; }
     .types-of-repair-section .types-of-repair__content .types-of-repair__item2 {
@@ -503,6 +544,18 @@ header {
         font-size: 18px;
         line-height: 54px;
         text-align: center; }
+      @media (max-width: 850px) {
+        .types-of-repair-section .types-of-repair__content .types-of-repair__tblock {
+          margin: 75% 20.65% 0 0;
+          padding: 21px 41px 37px 31px; }
+          .types-of-repair-section .types-of-repair__content .types-of-repair__tblock h4 {
+            font-size: 15px; }
+          .types-of-repair-section .types-of-repair__content .types-of-repair__tblock .price {
+            bottom: -20px;
+            height: 40px;
+            width: 190px;
+            font-size: 15px;
+            line-height: 40px; } }
       .types-of-repair-section .types-of-repair__content .types-of-repair__tblock.active {
         background: #f9f9f9; }
   .types-of-repair-section .measurements {
@@ -578,8 +631,7 @@ header {
         .types-of-repair-section .measurements__form form > div.data3 {
           margin-bottom: 15px; }
         .types-of-repair-section .measurements__form form > div label {
-          opacity: 0.5;
-          font-size: 15px; }
+          opacity: 0.5; }
         .types-of-repair-section .measurements__form form > div input[type="text"] {
           font-size: 20px;
           border: none;
@@ -689,6 +741,8 @@ header {
     position: relative; }
     .your-fantasies-section .your-fantasies-section__slides img {
       position: absolute; }
+      .your-fantasies-section .your-fantasies-section__slides img.sm-screen {
+        display: none; }
       .your-fantasies-section .your-fantasies-section__slides img.your-fantasies-section__slide1 {
         top: -40px;
         left: 0px; }
@@ -701,6 +755,43 @@ header {
       .your-fantasies-section .your-fantasies-section__slides img.your-fantasies-section__slide4 {
         bottom: 40px;
         right: 0px; }
+  .your-fantasies-section .your-fantasies-section_navigation {
+    width: 100%;
+    height: 0;
+    position: relative;
+    top: -50%; }
+    .your-fantasies-section .your-fantasies-section_navigation span {
+      background: #E3B873 url(../assests/images/nav.png) no-repeat center center;
+      display: block;
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: 0;
+      text-indent: -9999px;
+      box-shadow: 0 0 5px #E3B873; }
+      .your-fantasies-section .your-fantasies-section_navigation span:hover {
+        box-shadow: 0 0 10px #FFFFFF; }
+      .your-fantasies-section .your-fantasies-section_navigation span.projects-navigation__prev {
+        transform: rotate(180deg);
+        left: 45px; }
+      .your-fantasies-section .your-fantasies-section_navigation span.projects-navigation__next {
+        right: 45px; }
+    @media (max-width: 375px) {
+      .your-fantasies-section .your-fantasies-section_navigation span {
+        background-size: 6px auto;
+        width: 36px;
+        height: 36px;
+        margin-top: 18px;
+        box-shadow: none;
+        top: -190px; }
+        .your-fantasies-section .your-fantasies-section_navigation span.projects-navigation__prev {
+          left: 14px; }
+        .your-fantasies-section .your-fantasies-section_navigation span.projects-navigation__next {
+          right: 14px; } }
+    .your-fantasies-section .your-fantasies-section_navigation.sm-screen {
+      display: none; }
 
 .design-project-section {
   background: #FFFFFF;
@@ -718,12 +809,18 @@ header {
     margin: 0 auto 30px;
     background: url(../assests/images/des.png) no-repeat center bottom;
     margin: 0 auto 23px; }
+    @media (max-width: 375px) {
+      .design-project-section .design-project-section__hdr {
+        font-size: 22px; } }
   .design-project-section .design-project-section__descr {
     font-size: 20px;
     line-height: 1.6;
     text-align: center;
     margin: 0 auto 39px;
     max-width: 750px; }
+    @media (max-width: 375px) {
+      .design-project-section .design-project-section__descr {
+        font-size: 14px; } }
   .design-project-section .design-project-section__content {
     max-width: 1236px;
     margin: 0 auto;
@@ -731,13 +828,20 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     align-items: flex-start;
     position: relative;
     top: 465px;
     margin-top: -465px; }
     .design-project-section .design-project-section__content > div {
-      width: 31.7%; }
+      width: 31.7%;
+      max-width: 445px; }
+    @media (max-width: 850px) {
+      .design-project-section .design-project-section__content {
+        justify-content: center; }
+        .design-project-section .design-project-section__content > div {
+          width: 100%;
+          margin-bottom: 80px; } }
     .design-project-section .design-project-section__content .design-project-section__item1 {
       background: url(../assests/images/des1.jpg) no-repeat center 0; }
     .design-project-section .design-project-section__content .design-project-section__item2 {
@@ -788,6 +892,18 @@ header {
         font-size: 18px;
         line-height: 54px;
         text-align: center; }
+      @media (max-width: 850px) {
+        .design-project-section .design-project-section__content .design-project-section__tblock {
+          margin: 75% 20.65% 0 0;
+          padding: 21px 41px 37px 31px; }
+          .design-project-section .design-project-section__content .design-project-section__tblock h4 {
+            font-size: 15px; }
+          .design-project-section .design-project-section__content .design-project-section__tblock .price {
+            bottom: -20px;
+            height: 40px;
+            width: 190px;
+            font-size: 15px;
+            line-height: 40px; } }
 
 .goal-section {
   max-width: 1236px;
@@ -842,6 +958,8 @@ header {
           width: 42px;
           height: 14px;
           margin-right: 25px; }
+          .goal-section .goal-section__steps .pagination span.pagination__left:hover, .goal-section .goal-section__steps .pagination span.pagination__right:hover {
+            box-shadow: 0 0 10px #E3B873; }
         .goal-section .goal-section__steps .pagination span.pagination__right {
           transform: rotate(180deg);
           margin-right: 0;
@@ -861,11 +979,18 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       align-items: flex-start;
       margin-bottom: 15px; }
       .goal-section .goal-section__content .goal-section__navigator > div {
-        width: 31.7%; }
+        width: 31.7%;
+        max-width: 445px; }
+      @media (max-width: 850px) {
+        .goal-section .goal-section__content .goal-section__navigator {
+          justify-content: center; }
+          .goal-section .goal-section__content .goal-section__navigator > div {
+            width: 100%;
+            margin-bottom: 80px; } }
       .goal-section .goal-section__content .goal-section__navigator > div {
         margin-bottom: 35px;
         opacity: 0.3;
@@ -901,12 +1026,18 @@ header {
     margin: 0 auto 30px;
     background: url(../assests/images/team.png) no-repeat center bottom;
     margin: 0 auto 23px; }
+    @media (max-width: 375px) {
+      .team-section .team-section__hdr {
+        font-size: 22px; } }
   .team-section .team-section__descr {
     font-size: 20px;
     line-height: 1.6;
     text-align: center;
     margin: 0 auto 90px;
     max-width: 470px; }
+    @media (max-width: 375px) {
+      .team-section .team-section__descr {
+        font-size: 14px; } }
     .team-section .team-section__descr.about {
       position: relative;
       max-width: 560px;
@@ -929,12 +1060,19 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1030px;
     margin: 0 auto 60px;
     align-items: flex-start; }
     .team-section .team-section__people > div {
-      width: 31.7%; }
+      width: 31.7%;
+      max-width: 445px; }
+    @media (max-width: 850px) {
+      .team-section .team-section__people {
+        justify-content: center; }
+        .team-section .team-section__people > div {
+          width: 100%;
+          margin-bottom: 80px; } }
     .team-section .team-section__people > div {
       width: 26.55%;
       max-width: 270px;
@@ -1013,6 +1151,18 @@ header {
         font-size: 18px;
         line-height: 54px;
         text-align: center; }
+      @media (max-width: 850px) {
+        .team-section .team-section__people .team-section__tblock {
+          margin: 75% 20.65% 0 0;
+          padding: 21px 41px 37px 31px; }
+          .team-section .team-section__people .team-section__tblock h4 {
+            font-size: 15px; }
+          .team-section .team-section__people .team-section__tblock .price {
+            bottom: -20px;
+            height: 40px;
+            width: 190px;
+            font-size: 15px;
+            line-height: 40px; } }
 
 .client-section {
   padding-top: 590px;
@@ -1042,12 +1192,18 @@ header {
     line-height: 1.3;
     margin: 0 auto 30px;
     background: url(../assests/images/clients.png) no-repeat center bottom; }
+    @media (max-width: 375px) {
+      .client-section .client-section__hdr {
+        font-size: 22px; } }
   .client-section .client-section__descr {
     font-size: 20px;
     line-height: 1.6;
     text-align: center;
     max-width: 350px;
     margin: 0 auto 40px; }
+    @media (max-width: 375px) {
+      .client-section .client-section__descr {
+        font-size: 14px; } }
   .client-section .client-section__content {
     max-width: 1236px;
     margin: 0 auto;
@@ -1055,9 +1211,16 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center; }
+    align-items: flex-start; }
     .client-section .client-section__content > div {
-      width: 31.7%; }
+      width: 31.7%;
+      max-width: 445px; }
+    @media (max-width: 850px) {
+      .client-section .client-section__content {
+        justify-content: center; }
+        .client-section .client-section__content > div {
+          width: 100%;
+          margin-bottom: 80px; } }
     .client-section .client-section__content > div {
       width: 30.43%;
       background: #FFFFFF;
@@ -1158,6 +1321,9 @@ header {
         margin: 0 auto 30px;
         max-width: 100%;
         margin: 0; }
+        @media (max-width: 375px) {
+          .map-section .map-section__form form h4 {
+            font-size: 22px; } }
       .map-section .map-section__form form .map-section__data {
         width: 100%;
         display: flex;
@@ -1171,8 +1337,7 @@ header {
           width: 100%;
           margin-bottom: 45px; }
         .map-section .map-section__form form .map-section__data label {
-          opacity: 0.5;
-          font-size: 15px; }
+          opacity: 0.5; }
         .map-section .map-section__form form .map-section__data input[type="text"] {
           font-size: 20px;
           border: none;
@@ -1251,7 +1416,8 @@ footer {
     font-size: 1px;
     line-height: 1;
     color: #131313;
-    text-indent: -999px; }
+    text-indent: -999px;
+    position: absolute; }
   footer .logo {
     color: #E3B873;
     font-family: "Futurademic";
@@ -1283,7 +1449,8 @@ footer {
     align-items: center;
     width: 325px;
     margin-right: 7.52%;
-    white-space: nowrap; }
+    white-space: nowrap;
+    min-width: 310px; }
     footer .callback .callback__link {
       color: #E3B873;
       text-decoration: underline; }
@@ -1296,5 +1463,208 @@ footer {
     margin: 0 5.34% 0 7.56%; }
   footer .callback {
     margin: 0; }
+
+@media (max-width: 1240px) {
+  .completed-projects-section .projects-slides .projects-slides__info {
+    width: 350px; }
+  .completed-projects-section .projects-slides .projects-slides__visual {
+    width: 500px;
+    flex: 0 0 500px; }
+    .completed-projects-section .projects-slides .projects-slides__visual .project-nav li {
+      margin-right: 20px; } }
+@media (max-width: 880px) {
+  .types-of-repair-section .measurements {
+    display: none; } }
+@media (max-width: 375px) {
+  body {
+    font-size: 14px; }
+
+  header, section {
+    padding: 0 18px; }
+
+  h2 {
+    font-size: 23px;
+    margin: 0 0 10px; }
+
+  h3 {
+    margin: 0 auto 23px;
+    font-size: 22px;
+    text-align: center; }
+
+  button {
+    border-radius: 0; }
+
+  header {
+    font-size: 12px;
+    height: 57px; }
+    header .navbar {
+      display: none; }
+    header .callback {
+      width: auto;
+      min-width: 100px;
+      margin-right: 0; }
+      header .callback .callback__btn {
+        display: none; }
+      header .callback .callback__link {
+        color: #FFFFFF;
+        text-decoration: none; }
+
+  .calculate-section {
+    padding: 0; }
+    .calculate-section .soc-panel, .calculate-section .scroll-panel {
+      display: none; }
+    .calculate-section .project-slide {
+      background-position: 55% 0;
+      height: 476px; }
+      .calculate-section .project-slide .calculate-block {
+        width: auto;
+        margin: 0;
+        padding: 0 18px; }
+        .calculate-section .project-slide .calculate-block .calculate-block__text {
+          font-size: 18px;
+          margin-bottom: 30px;
+          max-width: 300px; }
+          .calculate-section .project-slide .calculate-block .calculate-block__text br {
+            display: none; }
+        .calculate-section .project-slide .calculate-block .calculate-block__form button {
+          width: 100%;
+          margin: 0 0 26px; }
+          .calculate-section .project-slide .calculate-block .calculate-block__form button.calculate-block__form_submit {
+            margin: 0; }
+
+  .completed-projects-section {
+    padding-bottom: 0; }
+    .completed-projects-section .projects-slides {
+      display: block; }
+      .completed-projects-section .projects-slides .projects-slides__info {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 35px; }
+        .completed-projects-section .projects-slides .projects-slides__info h3::after {
+          display: none; }
+        .completed-projects-section .projects-slides .projects-slides__info p {
+          text-align: center;
+          font-size: 14px;
+          padding: 0 13px; }
+        .completed-projects-section .projects-slides .projects-slides__info .pagination {
+          display: none; }
+        .completed-projects-section .projects-slides .projects-slides__info .lg-screen {
+          display: none; }
+      .completed-projects-section .projects-slides .projects-slides__visual {
+        padding-top: 0;
+        width: auto;
+        flex: 0; }
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-menu {
+          display: none; }
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-slides-container {
+          height: 242px;
+          overflow: hidden;
+          flex-wrap: wrap; }
+          .completed-projects-section .projects-slides .projects-slides__visual .projects-slides-container > div {
+            width: 100%;
+            margin: 0; }
+            .completed-projects-section .projects-slides .projects-slides__visual .projects-slides-container > div img {
+              width: 100%; }
+        .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation {
+          height: 0; }
+          .completed-projects-section .projects-slides .projects-slides__visual .projects-navigation span.projects-navigation__prev {
+            display: block; }
+      .completed-projects-section .projects-slides .sm-screen {
+        display: flex;
+        font-size: 14px;
+        margin-bottom: 35px; }
+        .completed-projects-section .projects-slides .sm-screen .information__item {
+          width: 50%;
+          margin-bottom: 25px; }
+          .completed-projects-section .projects-slides .sm-screen .information__item .hdr {
+            font-size: 14px; }
+    .completed-projects-section .video-container {
+      position: static;
+      margin: 0 0 50px; }
+      .completed-projects-section .video-container iframe {
+        width: 100%;
+        height: 207px; }
+
+  .types-of-repair-section {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #131313;
+    color: #FFFFFF;
+    position: relative; }
+    .types-of-repair-section .types-of-repair-section__descr {
+      margin: 0 auto 50px; }
+      .types-of-repair-section .types-of-repair-section__descr::before {
+        top: -25px; }
+    .types-of-repair-section .types-of-repair__form {
+      margin: 0 auto; }
+      .types-of-repair-section .types-of-repair__form .types-of-repair__wrap {
+        flex-wrap: wrap; }
+        .types-of-repair-section .types-of-repair__form .types-of-repair__wrap > div {
+          width: 100%;
+          margin-bottom: 60px; }
+          .types-of-repair-section .types-of-repair__form .types-of-repair__wrap > div.data2 {
+            margin-bottom: 25px; }
+          .types-of-repair-section .types-of-repair__form .types-of-repair__wrap > div.lg-screen {
+            display: none; }
+          .types-of-repair-section .types-of-repair__form .types-of-repair__wrap > div input {
+            max-width: 100%;
+            width: 100%;
+            background: none;
+            border-bottom: 1px solid #FFFFFF;
+            color: #FFFFFF; }
+      .types-of-repair-section .types-of-repair__form .types-of-repair__agreement {
+        padding-top: 0;
+        text-align: left;
+        margin-bottom: 55px; }
+    .types-of-repair-section .sm-screen {
+      display: block; }
+      .types-of-repair-section .sm-screen button {
+        border-radius: 0;
+        width: 100%;
+        position: relative;
+        bottom: -25px; }
+    .types-of-repair-section .types-of-repair__wrapper {
+      background: #FFFFFF;
+      color: #181818;
+      margin: 0 -18px;
+      padding: 0 18px;
+      padding-top: 80px; }
+      .types-of-repair-section .types-of-repair__wrapper .types-of-repair__content {
+        margin-bottom: 0; }
+
+  .your-fantasies-section {
+    height: auto;
+    background: #FFFFFF;
+    display: block; }
+    .your-fantasies-section .your-fantasies-section__navigator {
+      width: 100%; }
+      .your-fantasies-section .your-fantasies-section__navigator ul {
+        display: none; }
+    .your-fantasies-section .your-fantasies-section__slides {
+      width: 100%;
+      bottom: -121px;
+      margin-top: -121px; }
+      .your-fantasies-section .your-fantasies-section__slides img {
+        display: none; }
+        .your-fantasies-section .your-fantasies-section__slides img.sm-screen {
+          position: static;
+          height: 242px;
+          width: auto;
+          display: block; }
+    .your-fantasies-section .your-fantasies-section_navigation.sm-screen {
+      display: block; }
+      .your-fantasies-section .your-fantasies-section_navigation.sm-screen span {
+        top: -158px; }
+
+  .design-project-section {
+    background: #131313;
+    color: #FFFFFF;
+    padding-top: 173px; }
+    .design-project-section .design-project-section__descr {
+      padding: 0 34px; }
+      .design-project-section .design-project-section__descr br {
+        display: none; }
+    .design-project-section h4 {
+      color: #363636; } }
 
 /*# sourceMappingURL=style.css.map */

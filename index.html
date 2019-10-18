@@ -25,7 +25,7 @@
             </nav>
             <div class="callback">
                 <a href="tel:5551234567" class="callback__link">+7 (928) 768-32-39</a>
-                <button class="callback__btn">Request a call</button></li>
+                <button class="callback__btn">Request a call</button>
             </div>
         </header> 
         <main>
@@ -43,7 +43,7 @@
                     </div>
                 </div>  
                 <div class="soc-panel">
-                    <div class="soc-panel__network">INSTAGRAM</div>
+                    <div class="soc-panel__network"><a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></div>
                 </div> 
                 <div class="scroll-panel">
                         <div class="scroll-panel__btn">Scroll down</div>
@@ -59,7 +59,7 @@
                         <h3>Completed projects</h3>
                         <p>Only a small part of the work performed by our company is presented on the site. 
                             For 14 years on in the construction market we have made happy more than 1000 families</p>
-                        <div class="information">
+                        <div class="information lg-screen">
                             <div class="information__item">
                                 <div class="hdr">City:</div>
                                 Rostov-on-Don<br>
@@ -98,10 +98,10 @@
                             <div class="projects-slides-container__item1">
                                 <img src="./assests/images/slide1.jpg" alt="Rostov-on-Don, Admiral">
                             </div>
-                            <div class="projects-slides-container__item1">
+                            <div class="projects-slides-container__item2">
                                 <img src="./assests/images/slide2.jpg" alt="Sochi Thieves">
                             </div>
-                            <div class="projects-slides-container__item1">
+                            <div class="projects-slides-container__item3">
                                 <img src="./assests/images/slide1.jpg" alt="Rostov-on-Don Patriotic">
                             </div>
                        </div>
@@ -109,13 +109,32 @@
                             <span class="projects-navigation__prev">Prev</span>
                             <span class="projects-navigation__next">Next</span>
                         </div>
-                    </div>   
+                    </div> 
+                    <div class="information sm-screen">
+                        <div class="information__item">
+                            <div class="hdr">City:</div>
+                            Rostov-on-Don<br>
+                            LCD admiral
+                        </div>
+                        <div class="information__item">
+                            <div class="hdr">Apartment area:</div>
+                            81 m2
+                        </div>
+                        <div class="information__item">
+                            <div class="hdr">Repair time:</div>
+                            3.5 months
+                        </div>
+                        <div class="information__item">
+                            <div class="hdr">Repair Cost:</div>
+                            Upon request
+                        </div>
+                    </div>  
                 </div>
                 <div class="online-control">
                     Online control
                 </div>
                 <div class="video-container">
-                    <iframe width="817" height="434" src="https://www.youtube.com/embed/Btkt0F7O-O8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="817" height="434" src="https://www.youtube.com/embed/Btkt0F7O-O8?controls=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </section>
             <section class="types-of-repair-section">
@@ -123,15 +142,15 @@
                         <br>Leave a request below and you will receive a link to the broadcast.</p>
                 <form class="types-of-repair__form" name="regform" method="GET" action="#">
                     <div class="types-of-repair__wrap">
-                        <div>
+                        <div class="data1">
                             <label for="name">Name</label><br>
                             <input id="name" type="text" placeholder="What is your name:" required>
                         </div>
-                        <div>
+                        <div class="data2">
                             <label for="phone">Phone</label><br>
                             <input id="phone" type="text" placeholder="Your phone number:" required>
                         </div>
-                        <div>
+                        <div class="data3 lg-screen">
                             <button type="submit">SUBMIT</button>
                         </div>
                     </div>
@@ -141,7 +160,11 @@
                             <span>I agree to the processing of personal data</span>
                         </label>
                     </p>
+                    <div class="data3 sm-screen">
+                        <button type="submit">SUBMIT</button>
+                    </div>
                 </form>
+                <div class="types-of-repair__wrapper">
                     <div class="types-of-repair__hdr">Types of repair</div> 
                     <div class="types-of-repair__content">
                         <div class="types-of-repair__item1">
@@ -190,6 +213,7 @@
                                     </div>
                                 </div>
                     </div>
+                </div>    
                 <div class="measurements">
                     <div class="measurements__steps">
                         <div class="measurements__step1">Our specialist will arrive for measurements per day
@@ -258,6 +282,11 @@
                     <img class="your-fantasies-section__slide2" src="./assests/images/pict2.jpg" alt="Empire">
                     <img class="your-fantasies-section__slide3" src="./assests/images/pict3.jpg" alt="Classical">
                     <img class="your-fantasies-section__slide4" src="./assests/images/pict4.jpg" alt="Loft">
+                    <img class="your-fantasies-section__slide5 sm-screen" src="./assests/images/mpict.jpg" alt="American classic">
+                    <div class="your-fantasies-section_navigation sm-screen">
+                        <span class="projects-navigation__prev">Prev</span>
+                        <span class="projects-navigation__next sm-screen">Next</span>
+                    </div>
                 </div>
             </section>
             <section class="design-project-section">
@@ -527,10 +556,12 @@
                         <li><a href="#">TEAM</a></li>
                         <li><a href="#">REVIEWS</a></li>
                         <li><a href="#">CONTACTS</a></li>
-                        <li><a href="#">+7 (928) 768-32-39</a></li>
-                        <li><button>Request a call</button></li>
                     </ul>
                 </nav>
+                <div class="callback">
+                    <a href="tel:5551234567" class="callback__link">+7 (928) 768-32-39</a>
+                    <button class="callback__btn">Request a call</button>
+                </div>
         </footer> 
     </div>
 </body>
