@@ -72,9 +72,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 82px;
   text-transform: uppercase;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding-left: 82px; }
   header h1 {
     font-size: 1px;
     line-height: 1;
@@ -88,7 +88,8 @@ header {
     width: 100%;
     max-width: 580px;
     min-width: 400px;
-    margin: 0 6.3%; }
+    margin: 0 6.3%;
+    font-family: "FuturaBookC"; }
     header .navbar ul {
       width: 100%;
       display: flex;
@@ -102,23 +103,23 @@ header {
         header .navbar ul li a:hover {
           color: #E3B873;
           text-decoration: none; }
-
-.callback {
-  font-family: "Futurademic";
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 325px;
-  margin-right: 7.52%; }
-  .callback .callback__link {
-    color: #E3B873;
-    text-decoration: underline; }
-  .callback .callback__btn {
-    width: 161px;
-    height: 37px; }
-    .callback .callback__btn:hover {
-      box-shadow: inset 0 0 14px #FFFFFF; }
+  header .callback {
+    font-family: "Futurademic";
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+    margin-right: 7.52%;
+    white-space: nowrap; }
+    header .callback .callback__link {
+      color: #E3B873;
+      text-decoration: underline; }
+    header .callback .callback__btn {
+      width: 161px;
+      height: 37px; }
+      header .callback .callback__btn:hover {
+        box-shadow: inset 0 0 14px #FFFFFF; }
 
 .calculate-section {
   padding-left: 82px;
@@ -156,21 +157,24 @@ header {
     left: -312px;
     transform: rotate(90deg);
     text-align: center; }
-  .calculate-section .soc-panel__network {
-    display: inline-block;
-    margin-top: 30px;
-    margin-right: 110px;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #E3B873; }
-    .calculate-section .soc-panel__network::after {
-      content: "";
-      height: 1px;
-      background: #E3B873;
+    .calculate-section .soc-panel .soc-panel__network {
       display: inline-block;
-      vertical-align: middle;
-      width: 51px;
-      margin-left: 8px; }
+      margin-top: 30px;
+      margin-right: 110px;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #E3B873; }
+      .calculate-section .soc-panel .soc-panel__network::after {
+        content: "";
+        height: 1px;
+        background: #E3B873;
+        display: inline-block;
+        vertical-align: middle;
+        width: 51px;
+        margin-left: 8px; }
+      .calculate-section .soc-panel .soc-panel__network a:hover {
+        text-decoration: none;
+        text-shadow: 1px 1px 5px #FFFFFF; }
   .calculate-section .scroll-panel {
     text-transform: uppercase;
     font-family: "Yeseva One", cursive;
@@ -1136,7 +1140,8 @@ header {
     width: 100%;
     padding: 34px 0;
     box-sizing: border-box;
-    height: 445px; }
+    height: 445px;
+    z-index: 2; }
     .map-section .map-section__form form {
       margin: 0 auto;
       max-width: 520px; }
@@ -1227,6 +1232,69 @@ header {
     .map-section .map-section__content .map-section__communication a {
       display: inline-block;
       margin: 0 7px;
-      vertical-align: top; }
+      vertical-align: top;
+      border-radius: 50%; }
+      .map-section .map-section__content .map-section__communication a:hover {
+        box-shadow: 0 0 14px #FFFFFF; }
+
+footer {
+  height: 133px;
+  padding: 0 92px;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  box-sizing: border-box; }
+  footer h1 {
+    font-size: 1px;
+    line-height: 1;
+    color: #131313;
+    text-indent: -999px; }
+  footer .logo {
+    color: #E3B873;
+    font-family: "Futurademic";
+    white-space: nowrap; }
+  footer .navbar {
+    width: 100%;
+    max-width: 580px;
+    min-width: 400px;
+    margin: 0 6.3%;
+    font-family: "FuturaBookC"; }
+    footer .navbar ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      footer .navbar ul li a {
+        display: block;
+        line-height: 1;
+        text-align: center;
+        position: relative; }
+        footer .navbar ul li a:hover {
+          color: #E3B873;
+          text-decoration: none; }
+  footer .callback {
+    font-family: "Futurademic";
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+    margin-right: 7.52%;
+    white-space: nowrap; }
+    footer .callback .callback__link {
+      color: #E3B873;
+      text-decoration: underline; }
+    footer .callback .callback__btn {
+      width: 161px;
+      height: 37px; }
+      footer .callback .callback__btn:hover {
+        box-shadow: inset 0 0 14px #FFFFFF; }
+  footer .navbar {
+    margin: 0 5.34% 0 7.56%; }
+  footer .callback {
+    margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
